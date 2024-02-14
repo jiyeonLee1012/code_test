@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                // 소문자로 된 단어(문자열)가 입력되면 그 단어의 가운데 문자를 출력하는 프로그램을 작성하세 요.
+                // 단 단어의 길이가 짝수일 경우 가운데 2개의 문자를 출력합니다.
+                // study -> u
+                // main -> ai
+                // beautiful
+                let index = Math.floor(s.length / 2);
+
+                if (s.length % 2 === 1) {
+                    // 문자열의 길이가 홀수
+                    answer = s[index];
+                    // answer = s.substr(index, index + 1);
+                } else {
+                    // 문자열의 길이가 짝수
+                    answer = s[index - 1] + s[index];
+                    // answer = s.substr(index - 1, index + 1) ;
+                }
+                return answer;
+            }
+            console.log(solution("good"));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            //N개의 문자열이 입력되면 중복된 문자열은 제거하고 출력하는 프로그램을 작성하세요.
+            //출력하는 문자열은 원래의 입력순서를 유지합니다.
+
+            function solution(s){
+                // for (let x of s) {
+                //     if(!answer.includes(x)) answer.push(x);
+                // }
+                //filter 사용
+                let answer = s.filter(function(v, i){
+                    return s.indexOf(v) === i;
+                });
+
+                // array.indexOf(value) === index
+                // indexOf :: 호출한 객체에서 주어진 값과 일치하는 첫번째 인덱스를 반환
+                // Array.indexOf(searchValue) === index -> 배열객체 안에서 중복제거시
+                return answer;
+            }
+            let str=["good", "time", "good", "time", "student"];
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
