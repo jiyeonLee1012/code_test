@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+
+                // 문자열 역순 배치하기
+                let str = '';
+                for(let i = s.length - 1; i >= 0; i --) {
+                    str += s[i];
+                }
+                // for문 없이 문자열 역순 배치 
+                // str.split('').reverse().join('')
+                let answer = str.toUpperCase() === s.toUpperCase() ? "YES" : "NO";
+                return answer;
+            }
+            
+            let str="goooG";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+<!-- 
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer="YES";
+                s=s.toLowerCase();
+                if(s.split('').reverse().join('')!=s) return "NO";    
+                return answer;
+            }
+            
+            let str="gooG";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+ -->
+
+

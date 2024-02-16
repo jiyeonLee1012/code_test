@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+
+                // let str = [...s].filter((v, i) => /[a-zA-Z]/.test(v)).join('').toUpperCase();
+
+                let str = s.replaceAll(/[^a-zA-z]/g, '').toUpperCase();
+                let answer = str === str.split('').reverse().join('') ? "YES" : "NO";
+                return answer;
+            }
+            
+            let str="found7, time: study; Yduts; emit, 7Dnuof";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            // 등수 매기기
+            // 배열 순서대로 출력
+            // 같은 점수 -> 동일 등수로 출력
+            // 1등 3명 -> 2등부터는 4등
+            // 2중 for문
+            function solution(arr){
+
+                let answer = Array.from({length: arr.length}, () => 1);
+                // [1, 1, 1, 1, 1];
+
+                for (let i = 0 ; i < arr.length; i ++) {
+                    for (let j = 0; j < arr.length; j ++) {
+                        // 서로 비교하기
+                        if (arr[j] > arr[i]) answer[i]++;
+                    }
+                }
+                return answer;
+            }
+
+            let arr=[87, 89, 92, 100, 76];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>
